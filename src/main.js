@@ -4,6 +4,8 @@ import router from './router'; // Import the Vue Router instance
 
 // Import Bootstrap CSS
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+
 
 // Disable production tip
 Vue.config.productionTip = false;
