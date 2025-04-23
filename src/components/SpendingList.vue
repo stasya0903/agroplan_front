@@ -10,7 +10,7 @@
         </div>
         <div class="col-md-2">
           <label class="form-label">Amount</label>
-          <input type="number" v-model="newSpending.amount" class="form-control" />
+          <input type="number"  step="0.01" v-model="newSpending.amount" class="form-control" />
         </div>
         <div class="col-md-2">
           <label class="form-label">Plantation</label>
@@ -83,7 +83,7 @@
         <tbody>
         <tr v-for="(s) in spendings" :key="s.id">
             <td><input v-model="s.date" class="form-control" type="datetime-local" /></td>
-            <td><input v-model.number="s.amount" class="form-control" type="number" /></td>
+            <td><input v-model.number="s.amount" class="form-control"  step="0.01" type="number" /></td>
             <td>
               <select v-model="s.plantationId" class="form-select">
                 <option v-for="p in plantations" :key="p.id" :value="p.id">{{ p.name }}</option>

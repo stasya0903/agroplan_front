@@ -124,8 +124,9 @@ export default {
     async createWorker() {
       try {
         const response = await api.post('/worker/add', {...this.newWorker, dailyRate: parseFloat(this.newWorker.dailyRate) });
-        this.workers.push({id: response.data, ...this.newWorker}); // adjust if API doesn't return the new worker
+        this.workers.push({id: response.data, ...this.newWorker});
         this.newWorker.name = '';
+        this.newWorker.dailyRate = null;
       } catch (error) {
         this.setMessage(error.response?.data?.message || 'Failed to create worker.');
       }

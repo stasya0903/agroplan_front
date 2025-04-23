@@ -22,11 +22,11 @@
             </div>
             <div class="col-md-2">
               <label for="weight" class="form-label">Weight</label>
-              <input v-model="newIncoming.weight" type="number" class="form-control" id="weight" />
+              <input v-model="newIncoming.weight" type="number"  step="0.01" class="form-control" id="weight" />
             </div>
             <div class="col-md-2">
               <label for="price" class="form-label">Price</label>
-              <input v-model="newIncoming.price" type="number" class="form-control" id="price" />
+              <input v-model="newIncoming.price" type="number"  step="0.01" class="form-control" id="price" />
             </div>
             <div class="col-md-2">
               <label for="incomingTermId" class="form-label">Term</label>
@@ -122,10 +122,10 @@
               <input v-model="item.plantationName" type="text" class="form-control" />
             </td>
             <td>
-              <input v-model="item.weight" type="number" class="form-control" />
+              <input v-model="item.weight" type="number"  step="0.01" class="form-control" />
             </td>
             <td>
-              <input v-model="item.price" type="number" class="form-control" />
+              <input v-model="item.price" type="number"  step="0.01" class="form-control" />
             </td>
             <td>{{ item.amount }}</td>
             <td>{{ item.incomingTypeName }}</td>

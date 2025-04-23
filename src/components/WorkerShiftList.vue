@@ -84,6 +84,7 @@
           <input
               v-if="editIndex === index"
               type="number"
+              step="0.01"
               v-model="editableShift.payment"
               class="form-control"
           />
