@@ -216,7 +216,7 @@ export default {
     },
     async saveEdit() {
       try {
-        const date = this.formatDateTime(this.newWork.date);
+        const date = this.formatDateTime(this.editForm.date);
         await api.post('/work/edit', {...this.editForm, date});
         this.editId = null;
         await this.fetchWorks();
