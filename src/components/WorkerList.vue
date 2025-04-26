@@ -22,6 +22,7 @@
           <input type="number"
                  v-model="newWorker.dailyRate"
                  class="form-control"
+                 step="0.01"
                  placeholder="Enter daily rate"
           />
         </div>

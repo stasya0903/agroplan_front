@@ -51,13 +51,23 @@
         <table class="table table-bordered">
           <thead>
           <tr>
-            <th>ID</th><th>Date</th><th>Buyer</th><th>Weight</th><th>Price</th>
-            <th>Amount</th><th>Paid</th><th>Date Paid</th><th>Note</th>
+            <th>ID</th>
+            <th>Plantation</th>
+            <th>Date</th>
+            <th>Buyer</th>
+            <th>Weight</th>
+            <th>Price</th>
+            <th>Amount</th>
+            <th>Paid</th>
+            <th>Date Paid</th>
+            <th>Note</th>
+
           </tr>
           </thead>
           <tbody>
           <tr v-for="inc in budget.incoming" :key="inc.incomingId">
             <td>{{ inc.incomingId }}</td>
+            <td>{{ inc.plantationName }}</td>
             <td>{{ inc.date }}</td>
             <td>{{ inc.buyerName }}</td>
             <td>{{ inc.weight }}</td>
@@ -79,14 +89,20 @@
         <table class="table table-bordered">
           <thead>
           <tr>
-            <th>ID</th><th>Date</th><th>Type</th><th>Amount</th><th>Note</th>
+            <th>ID</th>
+            <th>Date</th>
+            <th>Plantation</th>
+            <th>Type</th>
+            <th>Amount</th>
+            <th>Note</th>
           </tr>
           </thead>
           <tbody>
           <tr v-for="sp in budget.spending" :key="sp.id">
             <td>{{ sp.id }}</td>
             <td>{{ sp.date }}</td>
-            <td>{{ sp.spendingName }}</td>
+            <td>{{ sp.plantationName }}</td>
+            <td>{{ sp.spendingTypeName }}</td>
             <td>{{ sp.amount }}</td>
             <td>{{ sp.note || '' }}</td>
           </tr>
