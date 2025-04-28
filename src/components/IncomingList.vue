@@ -128,7 +128,7 @@
               <input v-model="item.price" type="number"  step="0.01" class="form-control" />
             </td>
             <td>{{ item.amount }}</td>
-            <td>{{ item.incomingTypeName }}</td>
+            <td>{{ item.incomingTermName }}</td>
             <td>
               <input v-model="item.buyerName" type="text" class="form-control" />
             </td>

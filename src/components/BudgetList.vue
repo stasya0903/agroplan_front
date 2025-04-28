@@ -68,7 +68,7 @@
           <tr v-for="inc in budget.incoming" :key="inc.incomingId">
             <td>{{ inc.incomingId }}</td>
             <td>{{ inc.plantationName }}</td>
-            <td>{{ inc.date }}</td>
+            <td>{{ formatDate(inc.date) }}</td>
             <td>{{ inc.buyerName }}</td>
             <td>{{ inc.weight }}</td>
             <td>{{ inc.price }}</td>
@@ -100,7 +100,7 @@
           <tbody>
           <tr v-for="sp in budget.spending" :key="sp.id">
             <td>{{ sp.id }}</td>
-            <td>{{ sp.date }}</td>
+            <td>{{ formatDate(sp.date) }}</td>
             <td>{{ sp.plantationName }}</td>
             <td>{{ sp.spendingTypeName }}</td>
             <td>{{ sp.amount }}</td>
@@ -195,7 +195,12 @@ export default {
           }
         }
       });
-    }
+    },
+    formatDate(datetime) {
+      if (!datetime) return '';
+      const date = new Date(datetime);
+      return new Intl.DateTimeFormat('ru').format(date);
+    },
   }
 };
 </script>
