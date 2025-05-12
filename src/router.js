@@ -8,6 +8,7 @@ import WorkerShiftList from "@/components/WorkerShiftList.vue";
 import SpendingList from "@/components/SpendingList.vue";
 import IncomingList from "@/components/IncomingList.vue";
 import BudgetList from "@/components/BudgetList.vue";
+import ChemicalManager from "@/components/ChemicalManager.vue";
 
 Vue.use(Router);
 
@@ -47,6 +48,11 @@ export default new Router({
             path: '/incoming',
             name: 'IncomingList',
             component: IncomingList,
+        },
+        {
+            path: '/chemicals',
+            name: 'ChemicalManager',
+            component: ChemicalManager,
         },
         {
             path: '/budget',

@@ -34,6 +34,9 @@
               <router-link class="nav-link" to="/incoming">Incoming</router-link>
             </li>
             <li class="nav-item">
+              <router-link class="nav-link" to="/chemicals">Quimicos</router-link>
+            </li>
+            <li class="nav-item">
               <router-link class="nav-link" to="/budget">Budget Page</router-link>
             </li>
           </ul>
